@@ -1,0 +1,5 @@
+{
+    "name": "helm-hosted",
+    "type": "groovy",
+    "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\nimport org.sonatype.nexus.repository.storage.WritePolicy\ndef name='helm-hosted'\nif(!repository.getRepositoryManager().exists(name)) { def configuration = new Configuration();\nconfiguration.setRepositoryName(\"helm-hosted-bla\");\nconfiguration.setRecipeName(\"helm-hosted\");\nconfiguration.setAttributes(storage: [blobStoreName: BlobStoreManager.DEFAULT_BLOBSTORE_NAME, strictContentTypeValidation: true, writePolicy: WritePolicy.ALLOW_ONCE]);\nconfiguration.setOnline(true);\nrepository.createRepository(configuration); }"
+  } 

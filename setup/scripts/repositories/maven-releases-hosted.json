@@ -1,0 +1,5 @@
+{
+    "name": "maven-releases-hosted",
+    "type": "groovy",
+    "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\nimport org.sonatype.nexus.repository.storage.WritePolicy\nimport org.sonatype.nexus.repository.maven.LayoutPolicy\nimport org.sonatype.nexus.repository.maven.VersionPolicy\ndef name='maven-releases-hosted'\nif(!repository.getRepositoryManager().exists(name)) { repository.createMavenHosted(name, BlobStoreManager.DEFAULT_BLOBSTORE_NAME, false, VersionPolicy.RELEASE, WritePolicy.ALLOW_ONCE, LayoutPolicy.STRICT) }"
+}

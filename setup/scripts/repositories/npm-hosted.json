@@ -1,0 +1,5 @@
+{
+  "name": "npm-hosted",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\nimport org.sonatype.nexus.repository.storage.WritePolicy\ndef name='npm-hosted'\nif(!repository.getRepositoryManager().exists(name)) { repository.createNpmHosted(name, BlobStoreManager.DEFAULT_BLOBSTORE_NAME, true, WritePolicy.ALLOW_ONCE) }"
+}

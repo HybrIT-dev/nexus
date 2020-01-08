@@ -1,0 +1,5 @@
+{
+    "name": "maven-snapshots-hosted",
+    "type": "groovy",
+    "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\nimport org.sonatype.nexus.repository.storage.WritePolicy\nimport org.sonatype.nexus.repository.maven.LayoutPolicy\nimport org.sonatype.nexus.repository.maven.VersionPolicy\ndef name='maven-snapshots-hosted'\nif(!repository.getRepositoryManager().exists(name)) { repository.createMavenHosted(name, BlobStoreManager.DEFAULT_BLOBSTORE_NAME, false, VersionPolicy.SNAPSHOT, WritePolicy.ALLOW, LayoutPolicy.STRICT) }"
+}

@@ -1,0 +1,5 @@
+{
+    "name": "docker-hosted",
+    "type": "groovy",
+    "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\nimport org.sonatype.nexus.repository.storage.WritePolicy\ndef name='docker-hosted'\nif(!repository.getRepositoryManager().exists(name)) { repository.createDockerHosted(name, null, null, BlobStoreManager.DEFAULT_BLOBSTORE_NAME, false, false, WritePolicy.ALLOW_ONCE) }"
+}

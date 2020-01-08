@@ -3,12 +3,12 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: gcr.io/jenkinsxio/nexus
-  tag: dev
+  repository: hybrit-nexus
+  tag: "0.25"
   pullPolicy: IfNotPresent
 service:
   name: nexus
-  type: ClusterIP
+  type: NodePort
   externalPort: 80
   internalPort: 8081
   annotations:

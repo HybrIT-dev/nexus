@@ -1,0 +1,5 @@
+{
+    "name": "docker-hub-proxy",
+    "type": "groovy",
+    "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\ndef name='docker-hub-proxy'\nif(!repository.getRepositoryManager().exists(name)) { repository.createDockerProxy(name, \"https://registry-1.docker.io\", \"HUB\", null, null, null, BlobStoreManager.DEFAULT_BLOBSTORE_NAME, true, false) }"
+}

@@ -1,0 +1,5 @@
+{
+    "name" : "clear-default-repositories",
+    "type" : "groovy",
+    "content" : "if(repository.getRepositoryManager().exists('maven-central')) { repository.getRepositoryManager().delete('maven-central') }\nif(repository.getRepositoryManager().exists('maven-public')) { repository.getRepositoryManager().delete('maven-public') }\nif(repository.getRepositoryManager().exists('maven-releases')) { repository.getRepositoryManager().delete('maven-releases') }\nif(repository.getRepositoryManager().exists('maven-snapshots')) { repository.getRepositoryManager().delete('maven-snapshots') }\nif(repository.getRepositoryManager().exists('nuget-group')) { repository.getRepositoryManager().delete('nuget-group') }\nif(repository.getRepositoryManager().exists('nuget.org-proxy')) { repository.getRepositoryManager().delete('nuget.org-proxy') }\nif(repository.getRepositoryManager().exists('nuget-hosted')) { repository.getRepositoryManager().delete('nuget-hosted') }"
+}

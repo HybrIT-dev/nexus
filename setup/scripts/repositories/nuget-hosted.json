@@ -1,0 +1,5 @@
+{
+  "name": "nuget-hosted",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\nimport org.sonatype.nexus.repository.storage.WritePolicy\ndef name='nuget-hosted'\nif(!repository.getRepositoryManager().exists(name)) { repository.createNugetHosted(name, BlobStoreManager.DEFAULT_BLOBSTORE_NAME, true, WritePolicy.ALLOW_ONCE) }"
+}

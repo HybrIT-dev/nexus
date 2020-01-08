@@ -1,0 +1,5 @@
+{
+  "name": "nuget-org-proxy",
+  "type": "groovy",
+  "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\ndef name='nuget-org-proxy'\nif(!repository.getRepositoryManager().exists(name)) { repository.createNugetProxy(name,\"https://www.nuget.org/api/v2/\", BlobStoreManager.DEFAULT_BLOBSTORE_NAME, true) }"
+}

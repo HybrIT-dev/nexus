@@ -1,0 +1,5 @@
+{
+    "name": "docker-group",
+    "type": "groovy",
+    "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\ndef name='docker-group'\ndef members = ['docker-hub-proxy', 'docker-hosted']\nif(!repository.getRepositoryManager().exists(name)) { repository.createDockerGroup(name, null, null, members, true, BlobStoreManager.DEFAULT_BLOBSTORE_NAME) }"
+}

@@ -1,0 +1,5 @@
+{
+    "name": "maven-central-proxy",
+    "type": "groovy",
+    "content": "import org.sonatype.nexus.blobstore.api.BlobStoreManager\nimport org.sonatype.nexus.repository.storage.WritePolicy\nimport org.sonatype.nexus.repository.maven.LayoutPolicy\nimport org.sonatype.nexus.repository.maven.VersionPolicy\ndef name='maven-central-proxy'\nif(!repository.getRepositoryManager().exists(name)) { repository.createMavenProxy(name, \"https://repo1.maven.org/maven2/\", BlobStoreManager.DEFAULT_BLOBSTORE_NAME, false, VersionPolicy.RELEASE, LayoutPolicy.PERMISSIVE) }"
+}

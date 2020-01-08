@@ -1,0 +1,5 @@
+{
+    "name": "npm-group",
+    "type": "groovy",
+    "content": "def name='npm-group'\ndef members = ['npm-npmjs-proxy', 'npm-hosted']\nif(!repository.getRepositoryManager().exists(name)) { repository.createNpmGroup(name, members) }"
+}

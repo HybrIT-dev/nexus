@@ -1,0 +1,5 @@
+{
+    "name": "nuget-group",
+    "type": "groovy",
+    "content": "def name='nuget-group'\ndef members = ['nuget-hosted', 'nuget-org-proxy']\nif(!repository.getRepositoryManager().exists(name)) { repository.createNugetGroup(name, members) }"
+}

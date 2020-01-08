@@ -1,0 +1,5 @@
+{
+    "name": "maven-group",
+    "type": "groovy",
+    "content": "def name='maven-group'\ndef members = ['maven-central-proxy', 'maven-releases-hosted', 'maven-snapshots-hosted']\nif(!repository.getRepositoryManager().exists(name)) { repository.createMavenGroup(name, members) }"
+}
